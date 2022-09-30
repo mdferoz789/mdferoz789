@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ColorDrop</title>
+    <style>
+      section {
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .loader {
+        height: 100px;
+        width: 300px;
+        background-color: #000;
+        position: relative;
+        filter: blur(10px) contrast(20);
+      }
+      .drop1,
+      .drop2 {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .drop1 {
+        background-color: yellow;
+        left: 10%;
+        animation: ani1 ease-in-out infinite 2.5s;
+      }
+      .drop2 {
+        background-color: red;
+        right: 10%;
+        animation: ani2 ease-in-out infinite 2.5s;
+      }
+      @keyframes ani1 {
+        0% {
+          left: 10%;
+        }
+        50% {
+          left: 45%;
+        }
+        100% {
+          left: 10%;
+        }
+      }
+      @keyframes ani2 {
+        0% {
+          right: 10%;
+        }
+        50% {
+          right: 45%;
+        }
+        100% {
+          right: 10%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="drop1"></div>
+      <div class="drop2"></div>
+    </div>
+  </body>
+</html>
