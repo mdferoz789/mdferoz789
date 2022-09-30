@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Center a div</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: black;
+      }
+      section {
+        height: 100%;
+        width: 100vh;
+        /* first method to center a div */
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+
+        /* second method to center a div */
+        position: relative;
+        
+
+      }
+      .box{
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        position: absolute;
+        /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+
+        top: calc(50% -(100px/2));
+        left:  calc(50% -(100px/2));
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+<div class="box"></div>
+</section>
+  </body>
+</html>
