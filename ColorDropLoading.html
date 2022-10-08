@@ -7,11 +7,11 @@
     <title>ColorDrop</title>
     <style>
       section {
-        width: 100%;
-        margin-top: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        /* width: 100%; */
+        /* margin-top: 100px; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
       }
       .loader {
         height: 100px;
@@ -37,7 +37,7 @@
       .drop2 {
         background-color: red;
         right: 10%;
-        animation: ani2 ease-in-out infinite 2.5s;
+        /* animation: ani2 ease-in-out infinite 2.5s; */
       }
       @keyframes ani1 {
         0% {
@@ -62,11 +62,61 @@
         }
       }
     </style>
+    <style>
+      .loader2{
+        width: 500px;
+      }
+      .drop3,
+      .drop4 {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-60%);
+      }
+      .drop3 {
+        background-color: rgb(255, 0, 0);
+        left: 10%;
+        animation: ani11 ease-in-out infinite 5.5s;
+      }
+      .drop4 {
+        background-color: rgb(37, 4, 120);
+        right: 30%;
+        /* animation: ani21 ease-in-out infinite 2.5s; */
+      }
+      @keyframes ani11 {
+        0% {
+          left: 10%;
+        }
+        50% {
+          left: 45%;
+        }
+        100% {
+          left: 10%;
+        }
+      }
+      @keyframes ani21 {
+        0% {
+          right: 10%;
+        }
+        50% {
+          right: 45%;
+        }
+        100% {
+          right: 10%;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="loader">
       <div class="drop1"></div>
       <div class="drop2"></div>
+    </div>
+    <div class="loader2">
+      <div class="drop3"></div>
+      <div class="drop4"></div>
     </div>
   </body>
 </html>
