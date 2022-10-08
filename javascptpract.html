@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript examples</title>
+    
+  </head>
+  <body>
+    <div>hi</div>
+    <div id="example"></div>
+    <button onclick='document.getElementById("example").innerHTML="from js id" '>Click me </button>
+    <div class="example2"></div>
+    <!-- <button onclick='document.getElementsByClassName ("example2").innerHTML="from js class" '>Click me JS Class </button> -->
+    <button onclick='document.querySelector(".example2").innerHTML="from js class" '>Click me JS Class </button>
+    <!-- if we are using query selector then we have to use '#' for id and '.' for class selecting our element  -->
+    <!-- if we are using deocument.getElementbyId then we can directly use thge id or class name  -->
+    <br>
+    <button onclick='document.getElementById("img1").src="pic_bulbon.gif" '>Light ON</button> <br>
+    <img id="img1" src="./pic_bulboff.gif" alt="bulb image">
+    <br>
+    <button onclick='document.getElementById("img1").src="pic_bulboff.gif" '>Light OFF</button>
+    <p id="p-font">Hi Font style will change now and font color is white</p>
+    <button onclick='document.getElementById("p-font").style.fontSize="50px";document.getElementById("p-font").style.backgroundColor="red";document.getElementById("p-font").style.color="white" '> Font size and color change</button>
+    <!-- by using semicolon we can change more properties of one element at one time -->
+
+    <button onclick='document.querySelector("#img1").style.display="none" '> remove bulb</button>
+    <button onclick='document.querySelector("#img1").style.display="inline " '> Show bulb</button>
+
+    <script>
+        // document.getElementById("example").innerHTML = "From Javascript";
+        // document.querySelector(".example").innerHTML="from js class"
+        // document.querySelector("#example2").innerHTML="from js ID"
+        
+        
+      </script>
+  </body>
+</html>
