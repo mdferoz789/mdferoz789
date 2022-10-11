@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALC</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        h3{
+            font-size: 1.5rem;
+            font-family:Helvetica;
+            text-align: center;
+            margin-top: 4%;
+        }
+        input{
+            width: 100%;
+            border: 1px solid black;
+            font-family: Times New Roman;
+            font-size: 1.9rem;
+            border-radius: 25px;
+            text-align: center;
+            margin-top: 3%;
+        }
+        .btn{
+            width: 50%;
+            font-size: 1rem;
+            border: none;
+            font-family: monospace;
+            text-align: center;
+            margin-top: 8%;
+            margin-left: 25%;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 25px;
+
+        }
+        .btn:hover{
+            transition: 0.5s ease;
+            background-color: transparent;
+            color: black;
+        }
+        .res{
+            font-size: 2rem;
+            font-family: monospace;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Enter principal Amount</h3>
+        <input type="text"  id="pr">
+        <h3>Enter Rate of Interest</h3>
+        <input type="text"  id="roi">
+        <h3>Enter Years</h3>
+        <input type="text"  id="yr">
+        <button class="btn" onclick="calculate()" > Calculate</button>
+        <br><br>
+        <span id="res">$$</span>
+    </div>
+
+
+    <script>
+        function calculate(){
+            var principal=0;
+            var rate=0;
+            var years=0;
+            var SI=0;
+            principal=parseInt(document.getElementById("pr").value);
+            years=parseInt(document.getElementById("yr").value);
+            rate=parseInt(document.getElementById("roi").value);
+            SI=(principal*years*rate)/100;
+            document.getElementById("res").innerHTML=SI+("/-Rupess") 
+        }
+    </script>
+    
+</body>
+</html>
