@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Enter Number</label>
+    <input type="text" id="num" />
+    <label>Result</label>
+    <input type="text" id="result" />
+    <button id="btn-check">Check</button>
+    <script>
+      const num = document.getElementById("num");
+      const result = document.getElementById("result");
+      const btn = document.getElementById("btn-check");
+      btn.addEventListener("click", () => {
+        const c = num.value.split("").reverse().join("");
+        d=num.value.split("").reverse().join("")
+        console.log(d);
+        if (num.value === c) {
+          result.value = "Palindrome";
+        } else {
+          result.value = "Not Palindrome";
+        }
+      });
+    </script>
+  </body>
+</html>
